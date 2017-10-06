@@ -35,6 +35,8 @@ import { TicketsUpdateComponent }  from './Components/TicketsUpdate';
 import { CodeHighlightDirective }  from './Components/CodeHighlight';
 import { CodeContainerComponent }  from './Components/CodeContainer';
 
+import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
+
 var routes = [
   {
     path: '',
@@ -81,12 +83,12 @@ var routes = [
 @NgModule({
   imports:      [ 
                   BrowserModule, MaterialModule, RouterModule.forRoot(routes), FormsModule, HttpModule, BrowserAnimationsModule, ReactiveFormsModule, 
-                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot() 
+                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), HighlightJsModule 
                 ],
   declarations: [ AppComponent, LoginComponent, NavComponent, HomeComponent, AlertComponent, Demo1Component, Demo2Component, ReservacionesComponent,
                   TicketsUpdateComponent, PrismComponent, CodeContainerComponent, CodeHighlightDirective ],
   bootstrap:    [ AppComponent ],
-  providers:    [ WebService, AuthService, AccessGuardService ],
+  providers:    [ WebService, AuthService, AccessGuardService, HighlightJsService ],
   entryComponents: [ CodeContainerComponent ],
 })
 export class AppModule { }

@@ -24,13 +24,17 @@
         "../node_modules/froala-editor/css/froala_editor.pkgd.min.css",
         "../node_modules/froala-editor/css/sunburst.css",
         "../node_modules/froala-editor/css/froala_style.min.css",
-        "../node_modules/angular-prism/css/prism-okaidia.min.css"
+        "../node_modules/angular-prism/css/prism-okaidia.min.css",
+        "../node_modules/angular2-highlight-js/Highlightjs/monokai_sublime.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/froala-editor/js/froala_editor.pkgd.min.js",
         "../node_modules/froala-editor/js/froala.codepanel.js",
-        "../node_modules/froala-editor/js/prettify.min.js"
+        "../node_modules/froala-editor/js/prettify.min.js",
+        "../node_modules/angular2-highlight-js/Highlightjs/highlight.min.js",
+        "../node_modules/angular2-highlight-js/Highlightjs/cs.js",
+        "../node_modules/angular2-highlight-js/Highlightjs/typescript.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
