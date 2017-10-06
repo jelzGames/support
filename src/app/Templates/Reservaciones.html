@@ -1,0 +1,129 @@
+
+<form [formGroup]="reservacionform" (ngSubmit)="onSubmit() ">
+  
+  <md-card>
+    <md-card-content>
+      <div fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+        <div fxFlex>
+          <md-grid-list cols="1" rowHeight="70px">
+            <md-grid-tile>
+              <md-input-container>
+                <input formControlName="folio" [ngClass]="{'error': isValid('folio')}"  mdInput placeholder="Folio" type="number" >
+              </md-input-container>
+            </md-grid-tile>
+          </md-grid-list>
+        </div>
+        <div fxFlex="5%">
+        </div>
+        <div fxFlex>
+          <md-grid-list cols="1" rowHeight="70px">
+            <md-grid-tile>
+              <md-input-container >
+                <input formControlName="fecha" [ngClass]="{'error': isValid('fecha')}"  mdInput placeholder="Fecha" type="date">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                <textarea formControlName="reservo" mdInput placeholder="Reservo" maxlength="10" ></textarea>
+                <!--<input formControlName="reservo" [ngClass]="{'error': isValid('reservo')}"  mdInput placeholder="Reservo" type="text" style="width: 100px">-->
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                <textarea formControlName="reservo" [ngClass]="{'error': isValid('reservo')}" mdInput placeholder="Reservo" ></textarea>
+                <!--<input formControlName="huesped" [ngClass]="{'error': isValid('huesped')}"  mdInput placeholder="Huesped" type="text" >-->
+              </md-input-container>
+            </md-grid-tile>
+          </md-grid-list>
+        </div>
+        <div fxFlex="5%">
+        </div>
+        <div fxFlex>
+          <md-grid-list cols="1" rowHeight="70px">
+            <md-grid-tile>
+              <md-input-container>
+                <input formControlName="agencia" [ngClass]="{'error': isValid('agencia')}"  mdInput placeholder="Agencia" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                  <input formControlName="grupo" [ngClass]="{'error': isValid('grupo')}"  mdInput placeholder="Grupo" type="text">
+              </md-input-container>
+            </md-grid-tile>
+          </md-grid-list>
+        </div>
+        <div fxFlex="5%">
+        </div>
+        <div fxFlex>
+          <md-grid-list cols="1" rowHeight="70px">
+            <md-grid-tile>
+              <md-input-container >
+                <input formControlName="cliente" [ngClass]="{'error': isValid('cliente')}"  mdInput placeholder="Cliente" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                <input formControlName="nombre" [ngClass]="{'error': isValid('nombre')}"  mdInput placeholder="Nombre" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                <input formControlName="direccion" [ngClass]="{'error': isValid('direccion')}"  mdInput placeholder="Direccion" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                <input formControlName="poblacion" [ngClass]="{'error': isValid('poblacion')}"  mdInput placeholder="Poblacion" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                  <input formControlName="telefono" [ngClass]="{'error': isValid('telefono')}"  mdInput placeholder="Telefono" type="text">
+              </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+              <md-input-container>
+                  <input formControlName="rfc" [ngClass]="{'error': isValid('rfc')}"  mdInput placeholder="RFC" type="text">
+              </md-input-container>
+            </md-grid-tile>
+          </md-grid-list>
+        </div>
+      </div>
+    </md-card-content>
+    <md-card-content>
+      <div fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+        
+      </div>
+    </md-card-content>
+    <md-input-container>
+      <input formControlName="llegada" [ngClass]="{'error': isValid('llegada')}"  mdInput placeholder="Llegada" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="salida" [ngClass]="{'error': isValid('salida')}"  mdInput placeholder="salida" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="entradaoficial" [ngClass]="{'error': isValid('entradaoficial')}"  mdInput placeholder="Entrada Oficial" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="salidaoficial" [ngClass]="{'error': isValid('salidaoficial')}"  mdInput placeholder="Salida Oficial" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="diasestancia" [ngClass]="{'error': isValid('diasestancia')}"  mdInput placeholder="Dias de Estancia" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="fechadevencimiento" [ngClass]="{'error': isValid('fechadevencimiento')}"  mdInput placeholder="Fecha de Vencimiento" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="pagodeposito" [ngClass]="{'error': isValid('pagodeposito')}"  mdInput placeholder="Pago Deposito" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="capturo" [ngClass]="{'error': isValid('capturo')}"  mdInput placeholder="Capturo" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="tipodepago" [ngClass]="{'error': isValid('tipodepago')}"  mdInput placeholder="Tipo de Pago" type="text">
+    </md-input-container>
+    <md-input-container>
+      <input formControlName="observacion" [ngClass]="{'error': isValid('observacion')}"  mdInput placeholder="Observacion" type="text">
+    </md-input-container>
+  </md-card>    
+</form>

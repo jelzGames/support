@@ -1,0 +1,35 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.font-awsome-nav {
+  font-size: 20px !important;
+}
+
+.nav-ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.mat-figure {
+  justify-content: left !important;
+}
+
+.mat-input-container {
+  width: 270px;
+}
+
+textarea {
+   resize: none;
+}
+
+.btn-nav {
+  min-width: 0px !important;
+}
+
+.error {
+      background-color: #fff0f0
+}
+

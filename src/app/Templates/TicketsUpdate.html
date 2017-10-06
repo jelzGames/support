@@ -1,0 +1,34 @@
+<div>
+    <!--<div [froalaEditor] [(ngModel)]="dataHtml" ></div>-->
+    <!--<div id="editorPanel" > Hello, Froala!</div>
+    <button (click)="code()">Done</button>-->
+
+    <textarea [(ngModel)]="txtCode" style="width:1000px"></textarea>
+    <button (click)="code()">Done</button>
+   
+    <ng-template code-host></ng-template>
+ <!--
+ <form [formGroup]="TicketsUpdateForm" (ngSubmit)="onSubmit() ">
+    <md-card>
+      <div [froalaEditor]>Hello, Froala!</div>
+      <button text="done" (click)="code()"></button>
+      <!--<div id="editorPanel"> Hello, Froala!</div>-->
+     <!--
+      <md-input-container>
+         <input formControlName="email" [ngClass]="{'error': isValid('email')}"  mdInput placeholder="Correo" type="email">
+       </md-input-container>
+       <md-input-container>
+         <input mdInput formControlName="password" [ngClass]="{'error': isValid('password')}" placeholder="Contraseña" type="password">
+       </md-input-container>
+       <md-input-container>
+         <input mdInput formControlName="retry" [ngClass]="{'error': isValid('retry')}" placeholder="Retry" type="password">
+       </md-input-container>
+       <br/>
+       <span *ngIf="TicketsUpdateForm.errors?.notMatchingPassword" >Password do not match</span>
+       <br/>
+       <button md-raised-button color="primary">Upgrade</button>
+       <br/>
+       <!-- pasar al child 
+       <demo2 [firstName]='firstName' [lastName]='lastName' (onEmail)="onVoted($event)"></demo2>-->
+     <!--</md-card>
+  </form>-->

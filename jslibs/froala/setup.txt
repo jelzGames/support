@@ -1,0 +1,22 @@
+
+Agrege los archivos
+
+H:\Proyectos\Support2\jslibs\froala\code editor\css 
+
+A
+
+node_modules->froala-editor->css
+
+Agrege los archivos
+
+H:\Proyectos\Support2\jslibs\froala\code editor\js 
+
+A
+
+node_modules->froala-editor->js
+
+add them in .angular.cli.json
+
+reference:
+
+https://github.com/qqnc/froala-code-highlighter
