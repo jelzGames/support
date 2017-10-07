@@ -1,27 +1,16 @@
 <div>
     <!--<div [froalaEditor] [(ngModel)]="dataHtml" ></div>-->
-    <!--<div id="editorPanel" > Hello, Froala!</div>
-    <button (click)="code()">Done</button>-->
-
-    <textarea [(ngModel)]="txtCode" style="width:1000px"></textarea>
+    <div id="editorPanel" > Hello, Froala!</div>
     <button (click)="code()">Done</button>
+<!--
+    <textarea [(ngModel)]="txtCode" style="width:1000px"></textarea>
+    <button (click)="code()">Done</button>-->
    
     <!--
     <ng-template code-host></ng-template>-->
 
-    <section [innerHTML]="sampleContent" highlight-js-content=".highlight"></section>
+    
 
-    <pre>
-      <code #snippet class="typescript highlight-this">
-          class Greeter {{ '{' }}
-              constructor(public greeting: string) {{ '{' }} {{ '}' }}
-
-              greet() {{ '{' }}
-                  return "hello world";
-              {{ '}' }}
-          {{ '}' }};
-      </code>
-  </pre>
     <!--
  <form [formGroup]="TicketsUpdateForm" (ngSubmit)="onSubmit() ">
     <md-card>

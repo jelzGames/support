@@ -26,11 +26,12 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
             toolbarSticky: false,
             toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'quote', 'insertHR', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html', 'codePanel'],
           })
-        
+          
       });
 
     }
 
+    
     ngAfterViewInit() {
     }
   
@@ -49,8 +50,11 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
       (<CodeComponent>componentRef.instance).data = item.data;
     }
   
+    innerCode;
     code() {
-      this.loadComponent();
+      //this.innerCode = this.txtCode;
+      //this.loadComponent();
     }
  
 }
+

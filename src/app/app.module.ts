@@ -13,9 +13,17 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 /* Import prism core */
 import 'prismjs/prism';
 /* Import the language you need to highlight */
+// https://github.com/PrismJS/prism/tree/gh-pages/components
+//import 'prismjs/components/prism-vbnet';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-csharp';
+import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-css-extras';
 import { PrismComponent } from 'angular-prism';
-
+ 
 import { WebService } from './Services/WebService';
 import { AuthService } from './Services/Auth';
 import { AccessGuardService } from './Services/AccessGuard';
@@ -35,7 +43,6 @@ import { TicketsUpdateComponent }  from './Components/TicketsUpdate';
 import { CodeHighlightDirective }  from './Components/CodeHighlight';
 import { CodeContainerComponent }  from './Components/CodeContainer';
 
-import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 
 var routes = [
   {
@@ -80,15 +87,16 @@ var routes = [
   }
 ];
 
+
 @NgModule({
   imports:      [ 
                   BrowserModule, MaterialModule, RouterModule.forRoot(routes), FormsModule, HttpModule, BrowserAnimationsModule, ReactiveFormsModule, 
-                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), HighlightJsModule 
+                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
                 ],
   declarations: [ AppComponent, LoginComponent, NavComponent, HomeComponent, AlertComponent, Demo1Component, Demo2Component, ReservacionesComponent,
                   TicketsUpdateComponent, PrismComponent, CodeContainerComponent, CodeHighlightDirective ],
   bootstrap:    [ AppComponent ],
-  providers:    [ WebService, AuthService, AccessGuardService, HighlightJsService ],
+  providers:    [ WebService, AuthService, AccessGuardService],
   entryComponents: [ CodeContainerComponent ],
 })
 export class AppModule { }
