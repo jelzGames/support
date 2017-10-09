@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, OnDestroy, ViewChild, ComponentFactoryResolver} from '@angular/core';
 
+import { FormBuilder, Validators } from "@angular/forms"
+
 import { CodeHighlightDirective } from './CodeHighlight';
 import { CodeItem } from './CodeItem';
 import { CodeComponent } from './CodeComponent';
@@ -20,19 +22,32 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
 
     txtCode = "";
     
-    constructor(private componentFactoryResolver: ComponentFactoryResolver) {
+    ;
+
+    content = "";
+    constructor(private fb: FormBuilder, private componentFactoryResolver: ComponentFactoryResolver) {
+      this.TicketsUpdateForm = fb.group ({
+      
+      });
+
       $(document).ready(function() {
           ($("#editorPanel") as any).froalaEditor({
+            events : {
+              'froalaEditor.html.set': function (e, editor) {
+                editor.events.trigger('charCounter.update');
+              }
+            },
             toolbarSticky: false,
             toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'quote', 'insertHR', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html', 'codePanel'],
           })
           
       });
-
+      this.content = `<p>My HTML</p>`;
     }
 
     
     ngAfterViewInit() {
+      
     }
   
     ngOnDestroy() {
@@ -52,9 +67,16 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
   
     innerCode;
     code() {
+      var html =  ($("#editorPanel") as any).froalaEditor('html.get');
+      console.log(html);     
+      ($("#editorPanel") as any).froalaEditor('html.set', 'My custom paragraph.', true);
+      ($("#editorPanel") as any).froalaEditor('events.trigger', 'charCounter.update');
+      
+
       //this.innerCode = this.txtCode;
       //this.loadComponent();
     }
  
+    
 }
 

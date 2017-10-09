@@ -4,7 +4,30 @@
   <meta charset="utf-8">
   <title>Inventor</title>
   <base href="/">
+ 
+  <!--<script type="text/javascript" src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>-->
+  
+  <link href="assets/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+  <script src="assets/ckeditor/ckeditor.js"></script>
+  <script src="assets/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  
+  CKEDITOR.config.language = 'us';
+  CKEDITOR.config.codeSnippet_theme = 'school_book';
+  CKEDITOR.config.toolbar = 'Custom';
+  CKEDITOR.config.toolbar_Custom = [
+            {'name': 'basicstyles', 'items': ['Bold', 'Italic', 'Underline', '-', 'RemoveFormat']},
+            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList']},
+            {'name': 'indent', 'items': ['Indent', 'Outdent']},
+            {'name': 'codeSnippet', 'items': ['CodeSnippet',]}
+        ];
+  CKEDITOR.config.codeSnippet_theme = 'school_book';
+  CKEDITOR.config.tabSpaces = 4;
+  CKEDITOR.config.extraPlugins = 'codesnippet';
+  </script>
 
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>

@@ -43,6 +43,10 @@ import { TicketsUpdateComponent }  from './Components/TicketsUpdate';
 import { CodeHighlightDirective }  from './Components/CodeHighlight';
 import { CodeContainerComponent }  from './Components/CodeContainer';
 
+// https://github.com/chymz/ng2-ckeditor
+import { CKEditorModule } from 'ng2-ckeditor';
+
+
 
 var routes = [
   {
@@ -91,7 +95,7 @@ var routes = [
 @NgModule({
   imports:      [ 
                   BrowserModule, MaterialModule, RouterModule.forRoot(routes), FormsModule, HttpModule, BrowserAnimationsModule, ReactiveFormsModule, 
-                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
+                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), CKEditorModule
                 ],
   declarations: [ AppComponent, LoginComponent, NavComponent, HomeComponent, AlertComponent, Demo1Component, Demo2Component, ReservacionesComponent,
                   TicketsUpdateComponent, PrismComponent, CodeContainerComponent, CodeHighlightDirective ],

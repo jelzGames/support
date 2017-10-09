@@ -1,7 +1,26 @@
 <div>
+    <ckeditor [(ngModel)]="content" 
+   
+    debounce="500">
+        <p>Hello <strong>world</strong></p>
+      </ckeditor>
+
+    <!--
+    <form [formGroup]="TicketsUpdateForm">
+        <md-card>
+          <div id="editorPanel" > </div>
+          
+         </ckeditor>
+        </md-card>
+        <md-card>
+            <button (click)="code()">Done</button>
+        </md-card>
+    </form>
+
+    
     <!--<div [froalaEditor] [(ngModel)]="dataHtml" ></div>-->
-    <div id="editorPanel" > Hello, Froala!</div>
-    <button (click)="code()">Done</button>
+    <!--<div id="editorPanel" > Hello, Froala!</div>
+    <button (click)="code()">Done</button>-->
 <!--
     <textarea [(ngModel)]="txtCode" style="width:1000px"></textarea>
     <button (click)="code()">Done</button>-->
