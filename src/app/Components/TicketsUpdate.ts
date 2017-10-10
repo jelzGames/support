@@ -55,11 +55,22 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
   
     innerCode;
     code() {
+      console.log(this.content.length);
+      console.log(this.content);
+      /*
+      var html = $.parseHTML( this.content );
+
+      $.each( html, function( i, el ) {
+          console.log(el.nodeName);
+      });
+      */
+
+      /*
       var html =  ($("#editorPanel") as any).froalaEditor('html.get');
       console.log(html);     
       ($("#editorPanel") as any).froalaEditor('html.set', 'My custom paragraph.', true);
       ($("#editorPanel") as any).froalaEditor('events.trigger', 'charCounter.update');
-      
+      */
 
       //this.innerCode = this.txtCode;
       //this.loadComponent();

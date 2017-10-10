@@ -1,11 +1,8 @@
 <div>
   
-    <ckeditor [(ngModel)]="content" 
-   
-    debounce="500">
-        <p>Hello <strong>world</strong></p>
-      </ckeditor>
-
+    <ckeditor [(ngModel)]="content" debounce="500">
+    </ckeditor>
+    <button (click)="code()">Done</button>
     <!--
     <form [formGroup]="TicketsUpdateForm">
         <md-card>
