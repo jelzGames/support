@@ -1,9 +1,13 @@
 import { Component, Input, Type, OnInit } from '@angular/core';
 import { CodeComponent } from './CodeComponent';
 
+///replace template
+//template: `<prism-block [code]="cssCode" [language]="'css'"></prism-block>`
+
 @Component({
-  template: `<prism-block [code]="cssCode" [language]="'css'"></prism-block>`
+   template: ``
 })
+
 export class CodeContainerComponent implements CodeComponent {
     @Input() data: any;
     cssCode = "";

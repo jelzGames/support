@@ -8,7 +8,7 @@ import { CodeComponent } from './CodeComponent';
 import { CodeContainerComponent } from './CodeContainer';
 
 import * as jQuery from 'jquery';
-import * as Prism from 'prismjs/prism';
+
 
 @Component({
   selector: 'TicketsUpdate',
@@ -30,18 +30,6 @@ export class TicketsUpdateComponent implements AfterViewInit, OnDestroy  {
       
       });
 
-      $(document).ready(function() {
-          ($("#editorPanel") as any).froalaEditor({
-            events : {
-              'froalaEditor.html.set': function (e, editor) {
-                editor.events.trigger('charCounter.update');
-              }
-            },
-            toolbarSticky: false,
-            toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'quote', 'insertHR', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html', 'codePanel'],
-          })
-          
-      });
       this.content = `<p>My HTML</p>`;
     }
 

@@ -7,23 +7,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 //https://alligator.io/angular/flex-layout/
 import { FlexLayoutModule } from "@angular/flex-layout";
-//https://github.com/froala/angular-froala-wysiwyg#use-with-angular-cli
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
-/* Import prism core */
-import 'prismjs/prism';
-/* Import the language you need to highlight */
-// https://github.com/PrismJS/prism/tree/gh-pages/components
-//import 'prismjs/components/prism-vbnet';
-import 'prismjs/components/prism-python';
-import 'prismjs/components/prism-csharp';
-import 'prismjs/components/prism-c';
-import 'prismjs/components/prism-typescript';
-import 'prismjs/components/prism-markup';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-css-extras';
-import { PrismComponent } from 'angular-prism';
- 
 import { WebService } from './Services/WebService';
 import { AuthService } from './Services/Auth';
 import { AccessGuardService } from './Services/AccessGuard';
@@ -43,10 +27,12 @@ import { TicketsUpdateComponent }  from './Components/TicketsUpdate';
 import { CodeHighlightDirective }  from './Components/CodeHighlight';
 import { CodeContainerComponent }  from './Components/CodeContainer';
 
+//install jquery
+//npm install --save jquery
+//npm install -D @types/jquery
+
 // https://github.com/chymz/ng2-ckeditor
 import { CKEditorModule } from 'ng2-ckeditor';
-
-
 
 var routes = [
   {
@@ -95,10 +81,10 @@ var routes = [
 @NgModule({
   imports:      [ 
                   BrowserModule, MaterialModule, RouterModule.forRoot(routes), FormsModule, HttpModule, BrowserAnimationsModule, ReactiveFormsModule, 
-                  FlexLayoutModule, FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), CKEditorModule
+                  FlexLayoutModule, CKEditorModule
                 ],
   declarations: [ AppComponent, LoginComponent, NavComponent, HomeComponent, AlertComponent, Demo1Component, Demo2Component, ReservacionesComponent,
-                  TicketsUpdateComponent, PrismComponent, CodeContainerComponent, CodeHighlightDirective ],
+                  TicketsUpdateComponent, CodeContainerComponent, CodeHighlightDirective ],
   bootstrap:    [ AppComponent ],
   providers:    [ WebService, AuthService, AccessGuardService],
   entryComponents: [ CodeContainerComponent ],

@@ -6,25 +6,29 @@
   <base href="/">
  
   <!--<script type="text/javascript" src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>-->
-  
-  <link href="assets/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-  <script src="assets/ckeditor/ckeditor.js"></script>
-  <script src="assets/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+
+  <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
   <script>
-  hljs.initHighlightingOnLoad();
-  
-  CKEDITOR.config.language = 'us';
-  CKEDITOR.config.codeSnippet_theme = 'school_book';
-  CKEDITOR.config.toolbar = 'Custom';
-  CKEDITOR.config.toolbar_Custom = [
-            {'name': 'basicstyles', 'items': ['Bold', 'Italic', 'Underline', '-', 'RemoveFormat']},
-            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList']},
-            {'name': 'indent', 'items': ['Indent', 'Outdent']},
-            {'name': 'codeSnippet', 'items': ['CodeSnippet',]}
-        ];
-  CKEDITOR.config.codeSnippet_theme = 'school_book';
-  CKEDITOR.config.tabSpaces = 4;
-  CKEDITOR.config.extraPlugins = 'codesnippet';
+      CKEDITOR.config.language = 'us';
+      CKEDITOR.config.toolbar = 'Custom';
+      CKEDITOR.config.toolbar_Custom = [
+                {'name': 'codeSnippet', 'items': ['CodeSnippet',]},
+                { 'name': 'document', 'items' : [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
+                { 'name': 'clipboard', 'items' : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+                { 'name': 'editing', 'items' : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
+                { 'name': 'forms', 'items' : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] },
+                { 'name': 'basicstyles', 'items' : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+                { 'name': 'paragraph', 'items' : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
+                { 'name': 'links', 'items' : [ 'Link','Unlink','Anchor' ] },
+                { 'name': 'insert', 'items' : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak' ] },
+                { 'name': 'indent', 'items': ['Indent', 'Outdent']},
+                { 'name': 'styles', 'items' : [ 'Styles','Format','Font','FontSize' ] },
+                { 'name': 'colors', 'items' : [ 'TextColor','BGColor' ] },
+                { 'name': 'tools', 'items' : [ 'Maximize', 'ShowBlocks','-'] }
+                
+            ];
+      CKEDITOR.config.tabSpaces = 4;
+      CKEDITOR.config.extraPlugins = 'lineutils,widget,codesnippet,prism';
   </script>
 
   
